@@ -11,9 +11,7 @@ This folder contains dependencies for the CLIP architecture.
 This folder contains dependencies for the ALBEF architecture. To use ALBEF, download the 14M pretrained `.pth` checkpoint from [ALBEF GitHub](https://github.com/salesforce/ALBEF?tab=readme-ov-file).
 
 ### 3. `data`
-- `annotations`: Input annotations file and images for Flickr. Download Flickr images from [Kaggle - Flickr Image Dataset](https://www.kaggle.com/datasets/hsankesara/flickr-image-dataset).
-- `MSCOCO`: Download MSCOCO images from [MSCOCO Website](https://cocodataset.org/#download). Use `karpathy_coco_split.json` as the annotation file with captions.
-- `MSCOCO classified` and `FLICKR30k classified`: Processed versions of MSCOCO and Flickr30k with associated tags for both images and captions.
+This folder contains Input annotations file and images for Flickr. Download Flickr images from [Kaggle - Flickr Image Dataset](https://www.kaggle.com/datasets/hsankesara/flickr-image-dataset). Download MSCOCO images from [MSCOCO Website](https://cocodataset.org/#download). Use `karpathy_coco_split.json` as the annotation file with captions. `MSCOCO classified` and `FLICKR30k classified`: Processed versions of MSCOCO and Flickr30k with associated tags for both images and captions.
 
 ### 4. `preprocessing`
 Contains scripts to generate classified MSCOCO and FLICKR30k annotations along with associated images.
