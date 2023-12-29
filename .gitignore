@@ -1,0 +1,57 @@
+# Compiled files
+*.compiled
+
+# Temporary files
+*~
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+__env__/
+env.bak/
+env1/
+venv1/
+env2/
+venv2/
+
+# IDE
+.idea/
+.vscode/
+
+# Dependency directories
+node_modules/
+bower_components/
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Compiled Python files
+*.pyc
+__pycache__/

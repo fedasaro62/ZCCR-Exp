@@ -1,0 +1,14 @@
+Pillow
+tqdm
+numpy
+json
+torch
+torchvision
+plotly
+nltk
+spacy
+csv
+scikit-learn
+transformers
+faiss
+hdbscan
