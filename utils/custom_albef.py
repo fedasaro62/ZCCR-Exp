@@ -65,8 +65,8 @@ class CustomAlbef:
         text                    = self.pre_caption(caption)
         text_input              = self.tokenizer(text, return_tensors="pt")
         text_input              = text_input.to('cuda')
-        text_output             = self.albef.text_encoder.bert(text_input.input_ids, attention_mask = text_input.attention_mask,                      
-                                                return_dict = True, mode = 'text')            
+        text_output             = self.albef.text_encoder.bert(text_input.input_ids, attention_mask = text_input.attention_mask,
+                                                return_dict = True, mode = 'text')
         text_feat               = text_output.last_hidden_state
         text_feat               = self.albef.text_proj(text_feat[:,0,:])
         if self.norm:

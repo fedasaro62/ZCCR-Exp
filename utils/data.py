@@ -12,7 +12,6 @@ class Data:
     def __init__(self,
                  dataset:str,
                  threshold:int,
-                 tokenization:str,
                  n_points_per_cluster:int=30):
 
         assert dataset in ['coco','flickr30k']
@@ -27,7 +26,7 @@ class Data:
         self.img_folder   = '{}_tagged_images_{}'.format(dataset,threshold)
 
         data = {} # images and text by class
-        with open(os.path.join(self.dataset_root, '{}_classified_tags.csv'.format(dataset,threshold)), "r") as f:
+        with open(os.path.join(self.dataset_root, '{}_classified_tags.csv'.format(dataset)), "r") as f:
             reader  = csv.reader(f, delimiter=',')
             counter = 0
             for row in tqdm(reader):
