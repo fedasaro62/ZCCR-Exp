@@ -128,8 +128,7 @@ def retrieval_(task                   : str,
                cluster_distance       : int,
                representative         : str,
                outpath                : str,
-               n                      : int=1000,
-               threshold              : int=90):
+               n                      : int=1000):
     
     assert task in ['txt2img', 'img2txt', 'txt2txt', 'img2img'], 'Insert txt2img or img2txt as task'
     assert dataset in ['coco', 'flickr30k'], 'Insert coco or flickr30k'
@@ -141,7 +140,7 @@ def retrieval_(task                   : str,
     assert cluster_distance in [5,15,25,50], ''
     assert representative in ['centroid', 'medoid'], ''
 
-    data          = Data(dataset,threshold,n_points_per_cluster)
+    data          = Data(dataset,n_points_per_cluster)
     size          = data.len
     emb_size      = EMB_SIZE[model_name]
     model         = MyClip() if model_name=='clip' else MyAlbef()

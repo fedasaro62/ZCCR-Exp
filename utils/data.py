@@ -11,19 +11,15 @@ from tqdm import tqdm
 class Data:
     def __init__(self,
                  dataset:str,
-                 threshold:int,
                  n_points_per_cluster:int=30):
 
         assert dataset in ['coco','flickr30k']
-        assert threshold == 90
 
         self.n_points_per_cluster = n_points_per_cluster
 
-        threshold = str(threshold)
-
         self.dataset_root = 'data'
 
-        self.img_folder   = '{}_tagged_images_{}'.format(dataset,threshold)
+        self.img_folder   = '{}_images_classified'.format(dataset)
 
         data = {} # images and text by class
         with open(os.path.join(self.dataset_root, '{}_classified_tags.csv'.format(dataset)), "r") as f:
@@ -39,7 +35,7 @@ class Data:
                 # if counter >= 10000:
                 #     break
 
-        clusters                = np.array([id for id, count in 
+        clusters                = np.array([id for id, count in
                                sorted([[k, len(data[k])] for k in data],
                                        key=lambda item: -item[1])])
         
